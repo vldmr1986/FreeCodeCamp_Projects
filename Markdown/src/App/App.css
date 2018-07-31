@@ -1,0 +1,67 @@
+.App {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.Editor,
+.Preview {
+  flex-grow: 1;
+  width: 45%;
+  margin: 20px;
+}
+
+.Editor__header,
+.Preview__header {
+  padding: 5px;
+  background-color: lightseagreen;
+  color: white;
+  margin-bottom: 0;
+  padding-left: 10px;
+  width: 94.6%;
+  width: calc(95% - 2px);
+}
+
+.Preview__window,
+.Editor__area {
+  display: block;
+  height: 100vh;
+  overflow: scroll;
+  padding: 5px;
+  margin: 0;
+  width: 95%;
+  border: 1px solid lightseagreen;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+@media only screen and (min-width: 1000px) {
+  
+  .App {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .App {
+        flex-direction: column;
+  }
+
+  .Preview,
+  .Editor {
+    width: 100%;
+    height: 45vh;
+    overflow: scroll;
+    margin: 0;
+  }
+
+  .Preview__window,
+  .Editor__area {
+    width: 100%;
+  }
+}
