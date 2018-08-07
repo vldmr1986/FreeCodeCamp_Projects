@@ -1,0 +1,91 @@
+body {
+  background: rgba(238,238,238, 0.8);
+}
+
+.App {
+  margin-top: 40px;
+}
+
+.Settings--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Settings--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.Minutes {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.Settings--header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#time-left {
+  margin: 50px auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.Button {
+  margin: 20px;
+}
+
+.Action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media only screen and (max-width:450px){
+  h1, .Minutes {
+    font-size: 20px;
+  }
+  
+  h2 {
+    font-size: 18px;
+  }
+  
+  .Settings--header {
+    text-transform: uppercase;
+  }
+  
+  #time-left {
+  margin: 30px auto;
+  }
+  
+  .Button {
+    margin-top: 0px;
+    padding: 6px;
+  }
+}
