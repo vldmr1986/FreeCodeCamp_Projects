@@ -14,5 +14,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://kwitochka.gthub.io/FreeCodeCamp_Projects/Pomodoro-Clock/build"
+  "homepage": "https://kwitochka.github.io/FreeCodeCamp_Projects/Pomodoro-Clock/build"
 }
