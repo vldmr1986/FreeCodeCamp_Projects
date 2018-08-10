@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ src, id, handleClick, alt }) => {
+const Button = ({ src, id, handleClick, alt, type }) => {
   return (
-    <div className="Button btn btn-secondary" id={id} onClick={handleClick}>
+    <button type = {type} className="Button btn btn-secondary" id={id} onClick={handleClick}>
       <img src={src} alt={alt}/>
-    </div>
+    </button>
   );
 };
 
@@ -15,5 +15,9 @@ Button.propTypes = {
   handleClick: PropTypes.func.isRequired,
   alt: PropTypes.string.isRequired,
 };
+
+Button.defaultProps = {
+  type: 'button'
+}
 
 export default Button;

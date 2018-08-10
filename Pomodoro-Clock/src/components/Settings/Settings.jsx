@@ -12,27 +12,29 @@ export default class Settings extends Component {
     }
   }
 
-  _increment = (e) => {
-    e.preventDefault();
+  _increment = () => {
     let min = this.state.minutes + 1;
-    this.state.minutes <= 59 ? this.setState(prevState => ({
-          minutes: min
-        })) 
-        : this.state.minutes;
+    if (min < 60) {
+      this.setState(prevState => ({ minutes: min }));
+    } else if ((min = 60)) {
+      this.setState({ minutes: 60 });
+    }
+    // console.log(min);
     this.props.setTimer(min);
   }
 
-  _decrement = (e) => {
-    e.preventDefault();
-    let min = this.state.minutes-1;
-    if(min >= 1){
-    this.setState({
+  _decrement = () => {
+    let min = this.state.minutes - 1;
+    if (min >= 0) {
+      this.setState(prevState => ({
         minutes: min
+      }));
+    } else if ((min = 0)) {
+      this.setState({
+        minutes: 0
       });
-    } else {
-      this.setState({ minutes: 0 });
     }
-
+    // console.log(min);
     this.props.setTimer(min);
   }
 

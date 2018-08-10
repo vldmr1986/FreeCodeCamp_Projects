@@ -60,9 +60,8 @@ class App extends Component {
   }
 
   _setSession = (min) => {
-       this.setState({
+      this.setState({
       sessionTime: min,
-      seconds: min * 60  
     });
   }
 
@@ -78,9 +77,9 @@ class App extends Component {
     });
   }
 
-  _resetAll = (e) => {
-    e.preventDefault();
-    this.setState(this.initialState);
+  _resetAll = () => {
+    clearInterval(this.timer);
+    this.setState(this.state = this.initialState);
   }
 
   render(){
@@ -113,12 +112,17 @@ class App extends Component {
             alt={this.state.active ? 'Pause button' : 'Play button'} 
             handleClick={(e) => {
               e.preventDefault();
+              if(this.state.seconds === this.initialState.seconds){
+                this._setTimer();
+              }
               this._startPauseTimer();
             } }
           />
           <Button
             src="https://png.icons8.com/windows/35/ffffff/synchronize.png"
-            id="reset" alt = 'Reset button' handleClick={this._resetAll}
+            id="reset"
+            type = "reset"
+            alt = 'Reset button' handleClick={this._resetAll}
           />
         </div>
       </div>
